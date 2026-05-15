@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container result">
+    <h1>🩺 Prediction Result</h1>
+    <h2>Disease: {{ disease }}</h2>
+    <p><strong>Description:</strong> {{ description }}</p>
+    <h3>🛡️ Precautions:</h3>
+    <ul>
+      {% for p in precautions %}
+        <li>{{ p }}</li>
+      {% endfor %}
+    </ul>
+    <a href="/">🔄 Try Again</a>
+  </div>
+</body>
+</html>

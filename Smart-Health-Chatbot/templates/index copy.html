@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Health Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 Smart Health Chatbot</h1>
+    <p>Enter your symptoms separated by commas:</p>
+
+    <form action="/predict" method="POST">
+      <textarea name="symptoms" placeholder="e.g. itching, skin rash, nodal skin eruptions"></textarea>
+      <button type="submit">Predict Disease</button>
+    </form>
+  </div>
+
+  <!-- Script for typing effect + validation -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
